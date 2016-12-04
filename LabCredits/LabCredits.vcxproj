@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="License.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Splash.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="License.h" />
+    <ClInclude Include="Splash.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{613CBF70-4F87-473B-A4D2-D94A549B1B75}</ProjectGuid>
     <RootNamespace>LabCredits</RootNamespace>
@@ -112,8 +123,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
