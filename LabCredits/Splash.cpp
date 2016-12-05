@@ -31,6 +31,9 @@ void Splash::update()
 {
 	;
 }
+/// <summary>
+/// change the gamestate to credits when this method is called.
+/// </summary>
 void Splash::changeToCreditsState()
 {
 	m_game->setGameState(GameState::Credits);
