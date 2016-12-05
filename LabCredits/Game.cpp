@@ -19,6 +19,7 @@ Game::Game() : m_window(sf::VideoMode(800, 480), "Credits"), m_currentGameState(
 	}
 	m_splashScreen = new Splash(*this, m_comicSans);
 	m_licenseScreen = new License(*this, m_comicSans);
+	m_credits = new Credits(*this, m_comicSans);
 }
 
 /// <summary>
@@ -28,6 +29,7 @@ Game::~Game()
 {
 	delete(m_splashScreen);
 	delete(m_licenseScreen);
+	delete(m_credits);
 	std::cout << "Destructing Game" << std::endl;
 }
 /// <summary>
@@ -76,10 +78,11 @@ void Game::update(sf::Time time)
 		break;
 	case GameState::Splash:
 		std::cout << "Splash" << std::endl;
-		m_splashScreen->update(time);	//Update our Splash Screen
+		m_splashScreen->update();	//Update our Splash Screen
 		break;
 	case GameState::Credits:
 		std::cout << "Credits" << std::endl;
+		m_credits->update(time);
 		break;
 	default:
 		break;
@@ -96,6 +99,13 @@ void Game::processEvents()
 		if (event.type == sf::Event::Closed)
 		{
 			m_window.close();
+		}
+		if (m_currentGameState == GameState::Splash)
+		{
+			if (event.type == sf::Event::KeyPressed)
+			{
+				m_splashScreen->changeToCreditsState();
+			}
 		}
 	}
 }
@@ -122,6 +132,7 @@ void Game::render()
 		break;
 	case GameState::Credits:
 		std::cout << "Credits  Render" << std::endl;
+		m_credits->render(m_window);
 		break;
 	default:
 		m_window.clear(sf::Color::Blue);

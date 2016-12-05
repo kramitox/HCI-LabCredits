@@ -27,13 +27,13 @@ Splash::~Splash()
 /// Function to handle how long our SplashScreen remains active and updating any animation we incorporate.
 /// </summary>
 /// <param name="deltaTime"></param>
-void Splash::update(sf::Time deltaTime)
+void Splash::update()
 {
-	m_cumulativeTime += deltaTime;
-	if (m_cumulativeTime.asSeconds() > 3)
-	{
-		m_game->setGameState(GameState::None);
-	}
+	;
+}
+void Splash::changeToCreditsState()
+{
+	m_game->setGameState(GameState::Credits);
 }
 /// <summary>
 /// Function that handles drawing our pretty text to the screen after setting the background colour.

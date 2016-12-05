@@ -14,9 +14,9 @@ public:
 	Splash(Game &game, sf::Font font);
 	~Splash();
 
-	void update(sf::Time deltaTime);
+	void update();
 	void render(sf::RenderWindow &window);
-
+	void changeToCreditsState();
 private:
 	Game *m_game;
 	sf::Time m_cumulativeTime;

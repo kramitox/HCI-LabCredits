@@ -5,7 +5,7 @@
 #include <SFML\Graphics.hpp>
 #include "Splash.h"
 #include "License.h"
-
+#include "Credits.h"
 ///NAME: Keenan McEntee
 ///STUDENT ID: C00201892
 ///Description: Header file for our game class.
@@ -13,7 +13,7 @@
 
 class Splash;
 class License;
-
+class Credits;
 ///Enum to handle all the different states our game can be in. (Pause, Play, etc.)
 enum class GameState{None,License,Splash,Credits};
 
@@ -35,6 +35,7 @@ private:
 	sf::RenderWindow m_window;
 	Splash *m_splashScreen;
 	License *m_licenseScreen;
+	Credits *m_credits;
 	sf::Font m_comicSans;
 };
 #endif // !GAME
