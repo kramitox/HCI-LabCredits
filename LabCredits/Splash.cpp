@@ -10,7 +10,7 @@
 /// </summary>
 /// <param name="game"></param>
 /// <param name="font"></param>
-Splash::Splash(Game &game, sf::Font font) : m_game(&game), m_comicSans(font), m_textMessage("Spash Screeen", m_comicSans)
+Splash::Splash(Game &game, sf::Font font) : m_game(&game), m_comicSans(font), m_textMessage("Splash Screen", m_comicSans)
 {
 	m_textMessage.setPosition(100.0f, 100.0f);
 	m_textMessage.setColor(sf::Color::White);

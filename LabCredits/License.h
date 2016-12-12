@@ -23,7 +23,11 @@ private:
 	Game *m_game;
 	sf::Time m_cumulativeTime;
 	sf::Font m_comicSans;
-	sf::Text m_textMessage;
+	sf::Text m_textGame;
+	sf::Text m_textMade;
+	sf::Text m_textBy;
+	sf::Text m_textKeenan;
+	int alpha;
 };
 
 #endif
