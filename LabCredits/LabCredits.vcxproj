@@ -31,6 +31,9 @@
     <ClInclude Include="License.h" />
     <ClInclude Include="Splash.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="ASSETS\TEXT\Credits.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{613CBF70-4F87-473B-A4D2-D94A549B1B75}</ProjectGuid>
     <RootNamespace>LabCredits</RootNamespace>

@@ -18,8 +18,14 @@ public:
 private:
 	Game *m_game;
 	sf::Time m_cumulativeTime;
+	float speed;
 	sf::Font m_comicSans;
-	sf::Text m_textMessage;
+	sf::Text m_textMessage[20];
+	bool m_header[20];
+	int m_textIndex;
+	int m_timeBetweenTexts;
+	std::string m_text;
 };
+
 #endif //Credits
 

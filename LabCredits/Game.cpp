@@ -71,6 +71,7 @@ void Game::update(sf::Time time)
 	{
 	case GameState::None:
 		std::cout << "No GameState" << std::endl;
+		m_window.close();
 		break;
 	case GameState::License:
 		std::cout << "License" << std::endl; 
@@ -81,7 +82,6 @@ void Game::update(sf::Time time)
 		m_splashScreen->update();	//Update our Splash Screen
 		break;
 	case GameState::Credits:
-		std::cout << "Credits" << std::endl;
 		m_credits->update(time);
 		break;
 	default:
@@ -131,7 +131,6 @@ void Game::render()
 		m_splashScreen->render(m_window);	//Render our Splash Screen to our window.
 		break;
 	case GameState::Credits:
-		std::cout << "Credits  Render" << std::endl;
 		m_credits->render(m_window);
 		break;
 	default:
