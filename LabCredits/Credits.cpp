@@ -55,7 +55,7 @@ void Credits::update(sf::Time deltaTime)
 			m_textMessage[i].setPosition(m_textMessage[i].getPosition().x - speed, 50 * cos(m_textMessage[i].getPosition().x / 5) + 250);
 		}
 	}
-	if (m_cumulativeTime.asSeconds() > (0.1))
+	if (m_cumulativeTime.asSeconds() > (m_timeBetweenTexts))
 	{
 		m_cumulativeTime = m_cumulativeTime.Zero;
 		if (stream1.is_open())
