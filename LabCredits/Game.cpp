@@ -11,7 +11,7 @@
 /// <summary>
 /// Game Constructor that handles setting up our window for our game and setting the gameState to License. It then tries to load in the Font file. Later proceeds to create a Splash and License objects.
 /// </summary>
-Game::Game() : m_window(sf::VideoMode(800, 480), "Credits"), m_currentGameState(GameState::License)
+Game::Game() : m_window(sf::VideoMode(800, 480), "Credits"), m_currentGameState(GameState::Credits)
 {
 	if (!m_comicSans.loadFromFile("c:/windows/fonts/comic.ttf"))
 	{

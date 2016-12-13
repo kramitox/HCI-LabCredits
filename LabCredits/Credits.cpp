@@ -9,24 +9,8 @@
 std::ifstream stream1;
 Credits::Credits(Game &game, sf::Font font) : m_game(&game), m_comicSans(font)
 {
-	for (int i = 0; i < 20; i++)
-	{
-		m_textMessage[i].setFont(m_comicSans);
-		m_textMessage[i].setCharacterSize(20);
-		m_textMessage[i].setPosition(300.0f, 100.0f);
-		m_textMessage[i].setColor(sf::Color::Color(0, 0, 0, 255));
-	}
-	speed = 0.4;
-	
-	stream1.open("./ASSETS/TEXT/Credits.txt");
-	std::getline(stream1, m_text);
-	m_textMessage[m_textIndex].setCharacterSize(35);
-	m_textMessage[m_textIndex].setString(m_text);
-	m_textMessage[m_textIndex].setPosition(810, 200);
-	m_textMessage[m_textIndex].setColor(sf::Color::Cyan);
-	m_timeBetweenTexts = 2;
-	m_header[m_textIndex] = true;
-	m_textIndex++;
+	m_textMessage.setPosition(100.0f, 100.0f);
+	m_textMessage.setColor(sf::Color::Color(0, 0, 0, 255));
 }
 
 /// <summary>
